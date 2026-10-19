@@ -98,6 +98,10 @@
       "currentLevel": "Niveau {{level}} — {{rank}}",
       "nextMission": "Mission suivante",
       "continueFrom": "Continuer depuis {{title}}",
+      "dailyChallenge": "Défi du jour",
+      "dailyChallengeDescription": "Terminez la mission du jour pour obtenir un bonus de 25 XP !",
+      "dailyChallengeCompleted": "Terminé aujourd'hui !",
+      "dailyChallengeLink": "Commencer la mission",
       "recentActivity": "Activité récente",
       "viewAll": "Tout voir",
       "quickStats": "Statistiques rapides",
@@ -315,6 +319,16 @@
       "beginChapter": "Commencer le chapitre {{number}}"
     }
   },
+  "certificate": {
+    "button": "🏅 Obtenir le certificat",
+    "downloading": "Génération en cours…",
+    "buttonAriaLabel": "Télécharger le certificat d'achèvement pour {{title}}",
+    "ofCompletion": "Certificat d'achèvement",
+    "thisCertifies": "Ceci certifie que",
+    "hasCompleted": "a terminé avec succès",
+    "missions": "{{count}} missions terminées",
+    "completedOn": "Terminé le {{date}}"
+  },
   "missionMap": {
     "title": "Carte des missions",
     "subtitle": "{{completed}} missions sur {{total}} terminées",
@@ -327,10 +341,12 @@
     },
     "chapters": {
       "all": "Tous les chapitres",
-      "n": "Chapitre {{number}}"
+      "n": "Chapitre {{number}}",
+      "standalone": "Autonome"
     },
     "card": {
       "chapterMission": "Chapitre {{chapter}} • Mission {{mission}}",
+      "standaloneMission": "Autonome • Mission {{mission}}",
       "xp": "⚡ {{xp}} XP",
       "completed": "✓ Terminée",
       "locked": "🔒 Verrouillée"
@@ -349,6 +365,22 @@
       "missionItemLocked": "Mission {{order}} : {{title}}, verrouillée"
     }
   },
+  "recommendation": {
+    "title": "Recommandé pour vous",
+    "badge": "Recommandé",
+    "startMission": "Commencer la mission",
+    "difficulty": "Difficulté :",
+    "xp": "{{xp}} XP",
+    "reasons": {
+      "struggledTopic": "Recommandé car « {{missionTitle}} » était difficile — pratiquez pour renforcer vos compétences.",
+      "struggledChapter": "Renforcez les fondamentaux du Chapitre {{chapter}} après plusieurs tentatives.",
+      "fastLearner": "Compte tenu de votre progression rapide, tentez ce défi {{difficulty}} !",
+      "unexploredChapter": "Prêt pour de la nouveauté ? Explorez le Chapitre {{chapter}}.",
+      "nextCampaign": "Poursuivez votre aventure avec la prochaine mission de la campagne.",
+      "gettingStarted": "Débutez votre aventure Soroban avec cette quête fondamentale.",
+      "allCompleted": "Vous avez terminé toutes les missions ! Rejouez « {{missionTitle}} » pour parfaire votre maîtrise."
+    }
+  },
   "missionDetail": {
     "tabs": {
       "story": "Histoire",
@@ -364,6 +396,10 @@
     "editor": {
       "reset": "↺ Réinitialiser",
       "hint": "💡 Indice",
+      "goldHint": "🪙 Indice ({{cost}} or)",
+      "goldHintTitle": "Dépensez {{cost}} or pour révéler le prochain indice",
+      "goldHintInsufficient": "Pas assez d'or — besoin de {{cost}} pour déverrouiller",
+      "goldHintUnlocked": "🪙 Indice (déverrouillé)",
       "solution": "👁️ Solution",
       "run": "▶ Lancer les tests",
       "running": "Exécution…",
@@ -409,6 +445,8 @@
       "validated": "Paramètres de la mission validés !",
       "validationFailed": "Validation échouée. Consultez le terminal.",
       "hintUnlocked": "Indice {{index}} débloqué",
+      "hintGoldUnlocked": "Indice {{index}} débloqué pour {{cost}} or",
+      "hintInsufficientGold": "Pas assez d'or — besoin de {{cost}} pour déverrouiller",
       "codeReset": "Code réinitialisé au modèle",
       "solutionLoaded": "Solution chargée dans l'éditeur"
     },

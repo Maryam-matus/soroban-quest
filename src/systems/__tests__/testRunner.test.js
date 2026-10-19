@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { runTests } from "../testRunner.js";
-import * as codeValidator from "../codeValidator.js";
+import * as codeValidator from "../codeValidator";
 
 describe("testRunner system", () => {
   beforeEach(() => {
@@ -81,7 +81,7 @@ describe("testRunner system", () => {
   describe("Phase 2 - Structural Validation", () => {
     it("fails structural check when no function definitions are found", async () => {
       const codeNoFn = `
-        // soroban_sdk usage but no fn
+        // soroban_sdk usage but no function
         use soroban_sdk::Env;
       `;
       const result = await runTests(codeNoFn, { checks: [] });
@@ -92,6 +92,20 @@ describe("testRunner system", () => {
         message: "✗ No function definitions found",
       });
       expect(result.allPassed).toBe(false);
+    });
+
+    it("ignores function declarations inside comments", async () => {
+      const codeWithCommentedFn = `
+        // fn commented_out() {}
+        use soroban_sdk::Env;
+      `;
+      const result = await runTests(codeWithCommentedFn, { checks: [] });
+
+      expect(result.results[1]).toMatchObject({
+        phase: "structure",
+        passed: false,
+        message: "✗ No function definitions found",
+      });
     });
 
     it("fails structural check when no Soroban markers are present", async () => {
